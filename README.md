@@ -62,8 +62,8 @@ Or run `rake test:coverage:run` and `rake test:coverage:display` separately.
 Tested under rubies:
 
 * MRI 1.9.3+
-* Rubinius 2+ (1.9 and 2.0+ modes)
 * JRuby 1.7+ (1.9 and 2.0+ modes)
+* Rubinius 2+ (2.0 mode only, 1.9 mode not supported)
 
 [RSpec] 3.0+ used for testing
 
