@@ -14,6 +14,7 @@ module Hexx
     module Metrics
 
       require_relative "metrics/base"
+      require_relative "metrics/simplecov.rb"
 
     end
 
