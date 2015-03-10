@@ -32,10 +32,6 @@ describe Hexx::RSpec do
 
     subject { described_class.load_metrics_for(double) }
 
-    it "returns self" do
-      expect(subject).to eq described_class
-    end
-
     context "when ENV[USE_SIMPLECOV] is set" do
 
       before  { ENV["USE_SIMPLECOV"] = "true" }
