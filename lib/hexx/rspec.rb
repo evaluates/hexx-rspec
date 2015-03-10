@@ -9,6 +9,7 @@ module Hexx
 
     require_relative "rspec/system"
     require_relative "rspec/metrics"
+    require_relative "rspec/install"
 
     class << self
 
