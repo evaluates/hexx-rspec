@@ -8,6 +8,7 @@ module Hexx
   module RSpec
 
     require_relative "rspec/system"
+    require_relative "rspec/metrics"
 
   end # module RSpec
 
