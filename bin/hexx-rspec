@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require "hexx-rspec"
+
+# Command line runner.
+class CLI < Thor
+  register(
+    Hexx::RSpec::Install,
+    "install",
+    "install",
+    "Installs 'hexx-rspec' into the host app."
+  )
+end
+
+CLI.start

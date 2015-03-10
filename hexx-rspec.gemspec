@@ -13,6 +13,7 @@ Gem::Specification.new do |gem|
   gem.license     = "MIT"
 
   gem.files            = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
+  gem.executables      = ["hexx-rspec"]
   gem.test_files       = Dir["spec/**/*", "Rakefile", "Guardfile"]
   gem.extra_rdoc_files = Dir["LICENSE", "README.md", ".yardopts"]
 
