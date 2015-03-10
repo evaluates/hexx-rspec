@@ -2,15 +2,16 @@
 language: ruby
 script: bundle exec rspec spec
 matrix:
-  - rvm: '1.9.3'
-    env: 'rspec=3.0'
-  - rvm: 'ruby-head'
-    env: 'rspec=master'
-  - rvm: 'rbx-2 --1.9'
-    env: 'rspec=3.0'
-  - rvm: 'rbx-head'
-    env: 'rspec=master'
-  - rvm: 'jruby-19mode'
-    env: 'rspec=3.0'
-  - rvm: 'jruby-21mode'
-    env: 'rspec=master'
+  include:
+    - rvm: '1.9.3'
+      env: 'rspec=3.0'
+    - rvm: 'ruby-head'
+      env: 'rspec=master'
+    - rvm: 'rbx-2 --1.9'
+      env: 'rspec=3.0'
+    - rvm: 'rbx-head'
+      env: 'rspec=master'
+    - rvm: 'jruby-19mode'
+      env: 'rspec=3.0'
+    - rvm: 'jruby-21mode'
+      env: 'rspec=master'
