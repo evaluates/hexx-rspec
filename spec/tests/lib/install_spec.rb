@@ -9,7 +9,6 @@ describe Hexx::RSpec::Install, :sandbox do
     it "creates necessary files" do
       %w(
         .rspec
-        Guardfile
         Rakefile
         config/metrics/simplecov.yml
       ).each { |file| expect(file).to be_present_in_sandbox }

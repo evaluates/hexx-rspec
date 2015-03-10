@@ -20,7 +20,6 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = ">= 1.9.3"
 
   gem.add_runtime_dependency "coveralls", "~> 0.7"
-  gem.add_runtime_dependency "guard-rspec", "~> 4.5"
   gem.add_runtime_dependency "i18n", "~> 0.7"
   gem.add_runtime_dependency "rake", "~> 10.3"
   gem.add_runtime_dependency "rspec", "~> 3.0"

@@ -27,11 +27,6 @@ module Hexx
       end
 
       # @private
-      def create_guardfile
-        copy_file "Guardfile"
-      end
-
-      # @private
       def create_rspec
         copy_file "_rspec", ".rspec"
       end
