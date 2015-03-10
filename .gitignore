@@ -1,0 +1,10 @@
+*.gem
+*.lock
+.bundle/
+.yardoc/
+coverage/
+doc/
+log/
+pkg/
+tmp/
+output/
