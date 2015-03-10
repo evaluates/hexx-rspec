@@ -11,5 +11,6 @@ module Hexx
 
   require_relative "hexx/rspec/version"
   require_relative "hexx/rspec"
+  require_relative "../config/initializer.rb"
 
 end # module Hexx
