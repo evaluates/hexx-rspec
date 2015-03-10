@@ -3,6 +3,30 @@
 describe Hexx::RSpec do
 
   let(:coverage_settings) { described_class::Metrics::SimpleCov }
+  let(:rake_tasks)        { Rake::Task.tasks.map(&:name)        }
+
+  describe ".install_tasks" do
+
+    before { described_class.install_tasks }
+
+    it "installs Gem tasks" do
+      expect(rake_tasks).to include("build", "install", "release")
+    end
+
+    it "installs RSpec tasks" do
+      expect(rake_tasks).to include("spec")
+    end
+
+    it "installs described_class tasks" do
+      expect(rake_tasks).to include(*%w(
+        test:coverage
+        test:coverage:display
+        test:coverage:run
+        test
+      ))
+    end
+
+  end # display .insall_tasks
 
   describe ".load_metrics_for" do
 
