@@ -7,6 +7,8 @@ module Hexx
   # @api public
   module RSpec
 
+    require_relative "rspec/system"
+
   end # module RSpec
 
 end # module Hexx
