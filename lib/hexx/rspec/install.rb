@@ -13,6 +13,13 @@ module Hexx
       #
       # @api public
 
+      class_option(
+        :rakefile,
+        default: true,
+        desc: "Create the Rakefile",
+        type: :boolean
+      )
+
       # @private
       def self.source_root
         @source_root ||= File.expand_path "../install", __FILE__
@@ -23,6 +30,7 @@ module Hexx
 
       # @private
       def create_rakefile
+        return unless options[:rakefile]
         copy_file "Rakefile"
       end
 
