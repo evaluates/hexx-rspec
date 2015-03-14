@@ -1,8 +1,9 @@
+# encoding: utf-8
+
 # Loads the RSpec support files.
 require "rspec"
 Dir[File.expand_path "spec/support/*.rb"].each { |file| require file }
 
-# encoding: utf-8
 if RUBY_ENGINE == "ruby"
   require "coveralls"
   Coveralls.wear!

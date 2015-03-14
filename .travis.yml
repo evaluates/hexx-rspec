@@ -1,6 +1,5 @@
 ---
 language: ruby
-script: bundle exec rspec
 matrix:
   include:
     - rvm: '1.9.3'
