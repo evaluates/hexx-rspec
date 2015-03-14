@@ -11,13 +11,13 @@ describe "Rake::Task['test:coverage']", :tasks do
 
     subject { try_in_sandbox { task.invoke } }
 
-    it "invokes test:coverage:run" do
+    it "invokes test:coverage:run", :capture do
       expect { subject }
         .to change { task_invoked? "test:coverage:run" }
         .to(true)
     end
 
-    it "invokes test:coverage:display" do
+    it "invokes test:coverage:display", :capture do
       expect { subject }
         .to change { task_invoked? "test:coverage:display" }
         .to(true)

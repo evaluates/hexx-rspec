@@ -2,7 +2,7 @@
 
 describe Hexx::RSpec::Install, :sandbox do
 
-  describe ".start" do
+  describe ".start", :capture do
 
     subject { try_in_sandbox { described_class.start options } }
 

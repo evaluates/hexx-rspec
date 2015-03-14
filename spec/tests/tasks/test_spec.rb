@@ -12,7 +12,7 @@ describe "Rake::Task[:test]", :tasks do
 
     subject { try_in_sandbox { task.invoke } }
 
-    it "runs tests" do
+    it "runs tests", :capture do
       expect { subject }.to change { commands }.to [
         "bundle exec rspec spec"
       ]
