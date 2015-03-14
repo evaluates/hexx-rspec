@@ -9,9 +9,6 @@ end
 # Loads bundler tasks
 Bundler::GemHelper.install_tasks
 
-# Loads the Hexx::RSpec without tasks
-require "hexx-rspec"
-
 # Sets the :spec task to default
 task :default do
   system "bundle exec rspec spec"
