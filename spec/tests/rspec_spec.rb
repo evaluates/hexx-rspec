@@ -39,8 +39,14 @@ describe Hexx::RSpec do
       it "initializes and runs a coverage settings" do
         expect(coverage_settings).to receive(:run)
         subject
-      end
-    end
+      end if RUBY_ENGINE == "ruby"
+
+      it "doesn't run settings" do
+        expect(coverage_settings).not_to receive(:run)
+        subject
+      end unless RUBY_ENGINE == "ruby"
+
+    end # context
 
     context "when ENV[USE_SIMPLECOV] isn't set" do
 
@@ -50,7 +56,8 @@ describe Hexx::RSpec do
         expect(coverage_settings).not_to receive(:run)
         subject
       end
-    end
+
+    end # context
 
   end # display .load_metrics_for
 

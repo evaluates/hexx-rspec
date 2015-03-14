@@ -25,7 +25,7 @@ module Hexx
       #
       # @return [self]
       def load_metrics_for(scope)
-        return unless ENV["USE_SIMPLECOV"]
+        return unless ENV["USE_SIMPLECOV"] && (RUBY_ENGINE == "ruby")
         scope.instance_eval { Hexx::RSpec::Metrics::SimpleCov.run }
       end
 
