@@ -2,16 +2,19 @@
 
 RSpec.configure do |config|
 
-  # Captures stdout
+  def capture_stdout
+    $stdout = StringIO.new
+    yield if block_given?
+
+    $stdout.string
+  rescue
+    ""
+  ensure
+    $stdout = STDOUT
+  end
+
   config.around :each, :capture do |example|
-    begin
-      $stdout = StringIO.new
-      example.run
-      result = $stdout.string
-    ensure
-      $stdout = STDOUT
-    end
-    result.to_s
+    capture_stdout { example.run }
   end
 
 end # RSpec.configure
