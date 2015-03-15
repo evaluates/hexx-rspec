@@ -1,10 +1,10 @@
 # encoding: utf-8
 require "yaml"
 
-# Returns the path to the temporary `spec/sandbox`.
+# Returns the path to the temporary `spec/tmp/sandbox`.
 # @return [String] The absolute path.
 def sandbox
-  @sandbox ||= File.expand_path "../tmp/sandbox"
+  @sandbox ||= File.expand_path "spec/tmp/sandbox"
 end
 
 # Clears the temporary `spec/sandbox`.
