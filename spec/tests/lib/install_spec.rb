@@ -16,6 +16,7 @@ describe Hexx::RSpec::Install, :sandbox do
           .rspec
           Rakefile
           config/metrics/simplecov.yml
+          spec/spec_helper.rb
         ).each { |file| expect(file).to be_present_in_sandbox }
       end
 

@@ -44,6 +44,17 @@ module Hexx
         copy_file "simplecov.yml", "config/metrics/simplecov.yml"
       end
 
+      # @private
+      def create_spec_helper
+        template "spec_helper.erb", "spec/spec_helper.rb"
+      end
+
+      private
+
+      def gemname
+        @gemname ||= ::File.basename(destination_root).downcase
+      end
+
     end # class Install
 
   end # module RSpec
