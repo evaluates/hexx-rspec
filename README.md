@@ -1,20 +1,24 @@
-# Hexx::RSpec 
+# Hexx::RSpec   [![Documentation Status](https://readthedocs.org/projects/hexx-rspec/badge/?version=latest)][readthedocs]
 
 [![Gem Version](https://img.shields.io/gem/v/hexx-rspec.svg?style=flat)][gem]
-[![Build Status](https://img.shields.io/travis/nepalez/hexx-rspec/master.svg?style=flat)][travis]
-[![Dependency Status](https://img.shields.io/gemnasium/nepalez/hexx-rspec.svg?style=flat)][gemnasium]
-[![Code Climate](https://img.shields.io/codeclimate/github/nepalez/hexx-rspec.svg?style=flat)][codeclimate]
-[![Coverage](https://img.shields.io/coveralls/nepalez/hexx-rspec.svg?style=flat)][coveralls]
+[![Build Status](https://img.shields.io/travis/hexx-rb/hexx-rspec/master.svg?style=flat)][travis]
+[![Dependency Status](https://img.shields.io/gemnasium/hexx-rb/hexx-rspec.svg?style=flat)][gemnasium]
+[![Code Climate](https://img.shields.io/codeclimate/github/hexx-rb/hexx-rspec.svg?style=flat)][codeclimate]
+[![Coverage](https://img.shields.io/coveralls/hexx-rb/hexx-rspec.svg?style=flat)][coveralls]
+[![Inline docs](http://inch-ci.org/github/hexx-rb/hexx-rspec.svg)][inch]
 
+[readthedocs]: https://readthedocs.org/projects/hexx-rspec/?badge=latest
 [gem]: https://rubygems.org/gems/hexx-rspec 
-[travis]: https://travis-ci.org/nepalez/hexx-rspec 
-[gemnasium]: https://gemnasium.com/nepalez/hexx-rspec 
-[codeclimate]: https://codeclimate.com/github/nepalez/hexx-rspec 
-[coveralls]: https://coveralls.io/r/nepalez/hexx-rspec 
+[travis]: https://travis-ci.org/hexx-rb/hexx-rspec 
+[gemnasium]: https://gemnasium.com/hexx-rb/hexx-rspec 
+[codeclimate]: https://codeclimate.com/github/hexx-rb/hexx-rspec 
+[coveralls]: https://coveralls.io/r/hexx-rb/hexx-rspec
+[inch]: https://inch-ci.org/github/hexx-rb/hexx-rspec
 
-The module adds RSpec, Coveralls and Simplecov dependencies to the gem, and adds their default settings.
+The module adds RSpec, Coveralls and Simplecov dependencies with their default settings.
 
-## Installation
+Installation
+------------
 
 Add this line to your application's Gemfile:
 
@@ -51,35 +55,34 @@ require "my_app"
 
 Review the `config/metrics/simplecov.yml` for coverage report settings.
 
-## Usage
+Usage
+-----
 
 Use `rake test` of `rake test:coverage` respectively.
 
 Or run `rake test:coverage:run` and `rake test:coverage:display` separately.
 
-## Compatibility
+Compatibility
+-------------
 
-Tested under rubies with API 1.9.3+:
+Tested under [rubies with API 1.9.3+](.travis.yml).
 
-* MRI 1.9.3+
-* JRuby 1.7+ (1.9 and 2.0+ modes)
-* Rubinius 2+ (1.9 and 2.0+ modes)
-
-[RSpec] 3.0+ used for testing
+Uses [RSpec] 3.0+ for testing
 
 [RSpec]: http://rspec.info
 
-## Contributing
+Contributing
+------------
 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with Rakefile or version
-  (if you want to have your own version, that is fine but bump version
-  in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+* Read the [STYLEGUIDE](config/metrics/STYLEGUIDE)
+* [Fork the project](https://github.com/hexx-rb/hexx-rspec)
+* Create your feature branch (`git checkout -b my-new-feature`)
+* Add tests for it
+* Commit your changes (`git commit -am '[UPDATE] Add some feature'`)
+* Push to the branch (`git push origin my-new-feature`)
+* Create a new Pull Request
 
-## License
+License
+-------
 
 See [MIT LICENSE](file: LICENSE).

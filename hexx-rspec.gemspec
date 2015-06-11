@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.version     = Hexx::RSpec::VERSION.dup
   gem.author      = "Andrew Kozin"
   gem.email       = "andrew.kozin@gmail.com"
-  gem.homepage    = "https://github.com/nepalez/hexx-rspec"
+  gem.homepage    = "https://github.com/hexx-rb/hexx-rspec"
   gem.summary     = "RSpec settings."
   gem.description = "RSpec, Coveralls and Simplecov settings."
   gem.license     = "MIT"
