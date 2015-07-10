@@ -43,6 +43,14 @@ module Hexx
       scope.instance_eval { Metrics::SimpleCov.run }
     end
 
+    # Installs gem-specific rake tasks
+    #
+    # @return [undefined]
+    # 
+    def self.install_tasks
+      Tasks.install
+    end
+
   end # module RSpec
 
 end # module Hexx
