@@ -1,24 +1,24 @@
 # encoding: utf-8
 require "yaml"
 
-# Returns the path to the temporary `spec/tmp/sandbox`.
+# Returns the path to the temporary `tmp/sandbox`.
 # @return [String] The absolute path.
 def sandbox
-  @sandbox ||= File.expand_path "spec/tmp/sandbox"
+  @sandbox ||= File.expand_path "tmp/sandbox"
 end
 
-# Clears the temporary `spec/sandbox`.
+# Clears the temporary `tmp/sandbox`.
 def clear_sandbox
   FileUtils.rm_rf sandbox
 end
 
-# Re-creates the temporary `spec/sandbox`.
+# Re-creates the temporary `tmp/sandbox`.
 def prepare_sandbox
   clear_sandbox
   FileUtils.mkdir_p sandbox
 end
 
-# Runs code from the temporary `spec/sandbox`.
+# Runs code from the temporary `tmp/sandbox`.
 def try_in_sandbox
   FileUtils.cd(sandbox) { yield }
 end

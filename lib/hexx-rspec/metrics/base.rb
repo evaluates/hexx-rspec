@@ -11,9 +11,6 @@ module Hexx
       # To be used by the 'hexx-suit' module as well
       class Base
 
-        # The utility class for sending commands to the system
-        SYSTEM = System
-
         # Loads metric settings and configures the current metric
         #
         # @return [Hexx::RSpec::Metrics]

@@ -7,7 +7,7 @@
 [![Coverage](https://img.shields.io/coveralls/hexx-rb/hexx-rspec.svg?style=flat)][coveralls]
 [![Inline docs](http://inch-ci.org/github/hexx-rb/hexx-rspec.svg)][inch]
 
-[readthedocs]: https://readthedocs.org/projects/hexx-rspec/?badge=latest
+[readthedocs]: http://hexx-rspec.readthedocs.org
 [gem]: https://rubygems.org/gems/hexx-rspec 
 [travis]: https://travis-ci.org/hexx-rb/hexx-rspec 
 [gemnasium]: https://gemnasium.com/hexx-rb/hexx-rspec 

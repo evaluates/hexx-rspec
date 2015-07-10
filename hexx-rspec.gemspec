@@ -1,5 +1,5 @@
 $:.push File.expand_path("../lib", __FILE__)
-require "hexx/rspec/version"
+require "hexx-rspec/version"
 
 Gem::Specification.new do |gem|
 
@@ -26,5 +26,6 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency "rspec", "~> 3.0"
   gem.add_runtime_dependency "simplecov", "~> 0.9"
   gem.add_runtime_dependency "thor", "~> 0.19"
+  gem.add_runtime_dependency "launchy", "~> 2.4"
 
 end

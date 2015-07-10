@@ -3,7 +3,6 @@ namespace :test do
   namespace :coverage do
 
     metric = Hexx::RSpec::Metrics::SimpleCov
-    caller = Hexx::RSpec::System
     output = -> { ENV.fetch("SIMPLECOV_OUTPUT") { "coveralls/index.html" } }
 
     # Loads settings for simplecov from the 'config/metrics/simplecov.yml'
@@ -12,14 +11,13 @@ namespace :test do
     end
 
     desc "Runs tests under the coveralls"
-    task run: :configure do
-      caller.call "rake test"
-      puts "see results in #{ output.call }"
+    task run: [:configure, :test] do
+      puts "see results in #{output.call}"
     end
 
     desc "Displays results of the coveralls last run"
     task display: :configure do
-      caller.call "launchy #{ output.call }"
+      Hexx::RSpec["launchy #{output.call}"]
     end
   end
 

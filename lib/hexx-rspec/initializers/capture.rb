@@ -5,7 +5,6 @@ RSpec.configure do |config|
   def capture_stdout
     $stdout = StringIO.new
     yield if block_given?
-
     $stdout.string
   rescue
     ""

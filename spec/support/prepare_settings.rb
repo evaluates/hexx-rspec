@@ -8,7 +8,7 @@
 # @return [undefined]
 def prepare_settings(settings, file = ".metrics.yml")
   try_in_sandbox do
-    ::FileUtils.mkdir_p ::File.dirname(file)
-    ::File.write file, settings.to_yaml
+    FileUtils.mkdir_p File.dirname(file)
+    File.write file, settings.to_yaml
   end
 end

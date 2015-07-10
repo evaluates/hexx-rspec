@@ -5,28 +5,13 @@ describe Hexx::RSpec do
   let(:coverage_settings) { described_class::Metrics::SimpleCov }
   let(:rake_tasks)        { Rake::Task.tasks.map(&:name)        }
 
-  describe ".install_tasks" do
+  describe ".[]" do
 
-    before { described_class.install_tasks }
-
-    it "installs Gem tasks" do
-      expect(rake_tasks).to include("build", "install", "release")
+    it "fails with unexecutable string" do
+      expect { described_class[''] }.to raise_error RuntimeError
     end
 
-    it "installs RSpec tasks" do
-      expect(rake_tasks).to include("spec")
-    end
-
-    it "installs described_class tasks" do
-      expect(rake_tasks).to include(*%w(
-        test:coverage
-        test:coverage:display
-        test:coverage:run
-        test
-      ))
-    end
-
-  end # display .insall_tasks
+  end # describe .[]
 
   describe ".load_metrics_for" do
 
@@ -61,4 +46,4 @@ describe Hexx::RSpec do
 
   end # display .load_metrics_for
 
-end # display Hexx::RSpec
+end # describe Hexx::RSpec

@@ -1,8 +1,12 @@
+# encoding: utf-8
+
 module Hexx
+
   module RSpec
 
     # The generator creates a Rakefile in a destination root
     class Install < Thor::Group
+
       include Thor::Actions
 
       # @!scope class
