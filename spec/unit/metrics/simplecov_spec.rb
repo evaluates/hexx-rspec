@@ -22,7 +22,7 @@ describe Hexx::RSpec::Metrics::SimpleCov, :sandbox do
 
     let(:options) do
       {
-        "output"  => "custom",
+        "output"  => "tmp/custom",
         "filters" => ["custom/"],
         "groups"  => { "Custom" => "custom/" }
       }

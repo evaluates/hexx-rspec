@@ -24,7 +24,7 @@ module Hexx
     # 
     def self.[](string)
       system(string)
-      fail "finished with status #{$?.exitstatus}" unless $?.success?
+      exit(false) unless $?.success?
     end
 
     # Loads coverage metric in a given scope

@@ -8,7 +8,7 @@ describe Hexx::RSpec do
   describe ".[]" do
 
     it "fails with unexecutable string" do
-      expect { described_class['foo'] }.to raise_error RuntimeError
+      expect { described_class['foo'] }.to raise_error SystemExit
     end
 
   end # describe .[]

@@ -20,8 +20,8 @@ describe "Rake::Task['test:coverage:display']", :tasks do
 
   it "displays results for custom ENV settings" do
     allow(Hexx::RSpec::Metrics::SimpleCov).to receive(:load)
-    ENV["SIMPLECOV_OUTPUT"] = "custom"
-    expect(Hexx::RSpec).to receive(:[]).with "launchy custom"
+    ENV["SIMPLECOV_OUTPUT"] = "tmp/custom"
+    expect(Hexx::RSpec).to receive(:[]).with "launchy tmp/custom"
   end
 
 end # describe Rake::Task[:test:coverage:display]
