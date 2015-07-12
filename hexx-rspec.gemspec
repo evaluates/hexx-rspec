@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = ">= 1.9.3"
 
-  gem.add_runtime_dependency "bundler", "~> 1.7"
+  gem.add_runtime_dependency "bundler", "~> 1.6"
   gem.add_runtime_dependency "coveralls", "~> 0.7"
   gem.add_runtime_dependency "i18n", "~> 0.7"
   gem.add_runtime_dependency "rake", "~> 10.3"
